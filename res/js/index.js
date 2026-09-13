@@ -5,7 +5,7 @@ const slideMenu = document.getElementById('slide-menu'); // Sliding Menu
 let prevScrollpos = window.pageYOffset; // Scroll Position
 
 // WINDOW SCROLL ACTION
-window.onscroll = function() { 
+window.onscroll = function() {
 let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos || hamburgerMenu.checked) {
     myHeader.classList.remove("hide-header");
@@ -13,11 +13,11 @@ let currentScrollPos = window.pageYOffset;
     myHeader.classList.add("hide-header");
   }
   prevScrollpos = currentScrollPos;
-  
-  if(window.pageYOffset < 400 && !hamburgerMenu.checked) {
-      myHeader.classList.remove("light-header");
+
+  if (currentScrollPos > 8) {
+      myHeader.classList.add("is-scrolled");
   } else {
-      myHeader.classList.add("light-header");
+      myHeader.classList.remove("is-scrolled");
   }
 }
 
@@ -25,12 +25,8 @@ let currentScrollPos = window.pageYOffset;
 hamburgerMenu.addEventListener('click', function() {
   if (hamburgerMenu.checked) {
     slideMenu.classList.remove("hide-menu");
-    myHeader.classList.add("light-header");
   } else {
     slideMenu.classList.add("hide-menu");
-    if(window.pageYOffset < 400) {
-      myHeader.classList.remove("light-header");
-  }
   }
 });
 
@@ -46,40 +42,53 @@ function expandImageFunc(imgs, sectionId) {
 // DEFAULT ON LOAD PAGE - SCROLL TO TOP
 window.scrollTo(0, 0);
 
-// TOUR AUTO-SCROLL
-const tourContainer = document.querySelector('.tour-container');
-if (tourContainer) {
-    let autoScroll = true;
-    let scrollPos = 0;
-    let resumeTimeout;
+// SCROLL REVEAL
+const revealTargets = document.querySelectorAll('.reveal');
+if (revealTargets.length) {
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        revealTargets.forEach((el) => revealObserver.observe(el));
+    } else {
+        revealTargets.forEach((el) => el.classList.add('is-visible'));
+    }
+}
 
-    tourContainer.addEventListener('mouseenter', () => {
-        autoScroll = false;
-        clearTimeout(resumeTimeout);
-        scrollPos = tourContainer.scrollLeft;
-    });
-    tourContainer.addEventListener('mouseleave', () => { autoScroll = true; });
-    tourContainer.addEventListener('touchstart', () => {
-        autoScroll = false;
-        clearTimeout(resumeTimeout);
-        scrollPos = tourContainer.scrollLeft;
-    }, { passive: true });
-    tourContainer.addEventListener('touchend', () => {
-        resumeTimeout = setTimeout(() => {
-            scrollPos = tourContainer.scrollLeft;
-            autoScroll = true;
-        }, 2000);
-    });
+// QUICK CONTACT FAB
+const quickContactFab = document.querySelector('.quick-contact-fab');
+if (quickContactFab) {
+    const fabToggle = quickContactFab.querySelector('.fab-toggle');
+    const fabActions = quickContactFab.querySelectorAll('.fab-action');
 
-    (function scrollStep() {
-        if (autoScroll) {
-            scrollPos += 0.4;
-            const maxScroll = tourContainer.scrollWidth - tourContainer.clientWidth;
-            if (scrollPos >= maxScroll) scrollPos = 0;
-            tourContainer.scrollLeft = scrollPos;
-        }
-        requestAnimationFrame(scrollStep);
-    })();
+    const closeFab = () => {
+        quickContactFab.classList.remove('is-open');
+        fabToggle.setAttribute('aria-expanded', 'false');
+        fabActions.forEach((action) => action.setAttribute('tabindex', '-1'));
+    };
+    const openFab = () => {
+        quickContactFab.classList.add('is-open');
+        fabToggle.setAttribute('aria-expanded', 'true');
+        fabActions.forEach((action) => action.removeAttribute('tabindex'));
+    };
+
+    closeFab();
+
+    fabToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        quickContactFab.classList.contains('is-open') ? closeFab() : openFab();
+    });
+    document.addEventListener('click', (e) => {
+        if (!quickContactFab.contains(e.target)) closeFab();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeFab();
+    });
 }
 
 // TOUR LIGHTBOX

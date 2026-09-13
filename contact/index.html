@@ -7,25 +7,54 @@
     <meta name="keywords" content="homestay, accommodation, travel, hospitality, rooms, shillong, meghalaya" />
     <title>Contact - Dorsen Homestay</title>
     <link rel="icon" href="../res/media/logo/dorsen-homestay-favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../res/css/main.css?v=7.0" />
+    <link rel="stylesheet" href="../res/css/main.css?v=9.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .contact-section { display: flex; align-items: stretch; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+        .contact-section .column { flex: 1 1 320px; display: flex; flex-direction: column; gap: 1.25rem; background: var(--color-white); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); }
+        .contact-section .item { display: flex; align-items: start; justify-content: space-between; flex-direction: column; gap: .8rem; padding: 1rem 0; border-top: 1px solid var(--color-amber-50); }
+        .contact-section .item:first-child { border-top: none; padding-top: 0; }
+        .contact-section .item .title { display: flex; align-items: center; gap: .8rem; font-size: 1.05rem; font-weight: 600; color: var(--color-ink); }
+        .contact-section .item .title .material-symbols-outlined { color: var(--color-amber-600); }
+        .contact-section .item a { font-size: 1rem; font-weight: 500; color: var(--color-ink-soft); transition: color 300ms var(--ease); }
+        .contact-section .item a:hover { color: var(--color-amber-600); }
+        .contact-section .map-column { padding: 0; overflow: hidden; }
+        .contact-section .map-column .item { border: none; padding: 0; }
+        .contact-section .map-column iframe { display: block; width: 100%; }
+
+        @media only screen and (max-width: 999px) {
+            .contact-section { padding: 3.5rem 1.25rem; }
+        }
+
+        @media only screen and (min-width: 1000px) {
+            .contact-section { padding: 5rem 1.25rem; }
+        }
+    </style>
   </head>
   <body>
     <header class="" id="my-header">
             <div class="header-container">
                 <div class="brand">
                     <a href="../">
-                        <img src="../res/media/logo/dorsen-homestay-accent-dark.svg" alt="Dorsen Homestay Logo">
+                        <img class="brand-crest" src="../res/media/logo/dorsen-homestay-favicon.svg" alt="">
+                        <span class="brand-word">
+                            <span class="brand-word-top">Dorsen</span>
+                            <span class="brand-word-bottom">Homestay</span>
+                        </span>
                     </a>
                 </div>
                 <div class="navigation">
                     <nav>
                         <a href="../">Home</a>
                         <a href="../rooms/">Rooms</a>
+                        <a href="../tours/">Tours</a>
                         <a href="./" class="active-nav-item">Contact</a>
                     </nav>
                 </div>
                 <div class="click-to-action">
+                    <a href="tel:+919863063286" class="btn desktop-only">
+                        <span class="material-symbols-outlined">call</span> Book Now
+                    </a>
                     <div class="hamburger-menu">
                         <label for="menu-check">
                             <input type="checkbox" id="menu-check"/>
@@ -42,6 +71,7 @@
                     <nav class="navigation">
                         <a href="../">Home</a>
                         <a href="../rooms/">Rooms</a>
+                        <a href="../tours/">Tours</a>
                         <a href="./" class="active-nav-item">Contact</a>
                         <a href="tel:+919863063286" class="light-button">Book Your Stay <span class="material-symbols-outlined"> chevron_right </span> </a>
                     </nav>
@@ -64,63 +94,98 @@
             </div>
         </header>
     <section class="page-title-section">
+        <span class="material-symbols-outlined icon">mail</span>
         <h2 class="font-secondary">Contact Us</h2>
-        <p>Home > Contact</p>
+        <p>Home / Contact</p>
     </section>
-
-    <style>
-        /*----------------------------------FOOTER----------------------------------*/
-
-        .contact-section { display: flex; align-items: start; justify-content: space-between; gap: 3rem; }
-        .contact-section .column { display: flex; align-items: start; justify-content: center; flex-direction: column; gap: 3rem; }
-        .contact-section .item { display: flex; align-items: start; justify-content: space-between; flex-direction: column; gap: 2rem }
-        .contact-section .item .title { display: flex; align-items: center; justify-content: center; gap: 1rem; font-size: 1.5rem; }
-        .contact-section .item a { font-size: 1.2rem; font-weight: 600; color: var(--color-accent) !important; }
-        .contact-section .contact-form { padding: 1rem; border-radius: 4px; }
-
-        @media only screen and (max-width: 999px) {
-            .contact-section  { flex-direction: column; padding: 5rem 1rem; }
-        }
-
-        @media only screen and (min-width: 1000px) {
-            .contact-section  { flex-direction: row; padding: 5rem; }
-        }
-        /*----------------------------------FOOTER----------------------------------*/
-    </style>
 
     <section class="bg-white">
         <div class="contact-section container">
-            <div class="column">
-                <h1>Kindly reach to us via</h1>
+            <div class="column reveal">
+                <h3 class="font-secondary">Homestay Enquiries</h3>
                 <div class="item">
-                    <div class="title"><span class="material-symbols-outlined">call</span> Phone Number</div>
-                    <span><a href="tel:+919863063286">+91 9863063286</a> / <a href="tel:+918730099269">+91 8730099269</a></span>
+                    <div class="title"><span class="material-symbols-outlined">call</span> Phone</div>
+                    <span><a href="tel:+919863063286">+91 9863063286</a> &nbsp;/&nbsp; <a href="tel:+918730099269">+91 8730099269</a></span>
                 </div>
                 <div class="item">
                     <div class="title"><span class="material-symbols-outlined">mail</span> Email</div>
                     <a href="mailto:dorsenhomestay@gmail.com">dorsenhomestay@gmail.com</a>
                 </div>
-            </div>
-            <div class="column">
-                <h1>Visit us on site</h1>
                 <div class="item">
                     <div class="title"><span class="material-symbols-outlined">location_on</span> Address</div>
-                    <p>Umshing Umjapung, behind Umshing Presbyterian Church, Meghalaya, India - 793022</p>
-                    <div class="google-map-sm">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4474.041214086668!2d91.902428!3d25.605833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDM2JzIxLjAiTiA5McKwNTQnMDguNyJF!5e1!3m2!1sen!2sin!4v1697467953213!5m2!1sen!2sin" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="google-map-lg">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4474.041214086668!2d91.902428!3d25.605833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDM2JzIxLjAiTiA5McKwNTQnMDguNyJF!5e1!3m2!1sen!2sin!4v1697467953213!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                    <p style="margin: 0;">Umshing Umjapung, behind Umshing Presbyterian Church, Meghalaya, India - 793022</p>
+                </div>
+            </div>
+            <div class="column reveal" style="transition-delay: 80ms">
+                <h3 class="font-secondary color-tours">Tours & Travel Enquiries</h3>
+                <p style="margin-top: -.5rem;">For sightseeing and travel bookings, reach our partner Romel Compass directly.</p>
+                <div class="item">
+                    <div class="title"><span class="material-symbols-outlined">call</span> Phone</div>
+                    <span><a href="tel:+919233277422">+91 9233277422</a> &nbsp;/&nbsp; <a href="tel:+918787747759">+91 8787747759</a></span>
+                </div>
+                <a href="../tours/" class="btn light-button" style="align-self: flex-start; margin-top: .5rem;">
+                    View Tours <span class="material-symbols-outlined">chevron_right</span>
+                </a>
+            </div>
+            <div class="column map-column reveal" style="transition-delay: 160ms">
+                <div class="google-map-sm">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4474.041214086668!2d91.902428!3d25.605833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDM2JzIxLjAiTiA5McKwNTQnMDguNyJF!5e1!3m2!1sen!2sin!4v1697467953213!5m2!1sen!2sin" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="google-map-lg">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4474.041214086668!2d91.902428!3d25.605833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDM2JzIxLjAiTiA5McKwNTQnMDguNyJF!5e1!3m2!1sen!2sin!4v1697467953213!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
+        <div class="footer-section container">
+            <div class="brand">
+                <span class="brand-mark">
+                    <img class="brand-crest" src="../res/media/logo/dorsen-homestay-favicon.svg" alt="">
+                    <span class="brand-word">
+                        <span class="brand-word-top">Dorsen</span>
+                        <span class="brand-word-bottom">Homestay</span>
+                    </span>
+                </span>
+            </div>
+            <div class="contact">
+                <h3 class="font-secondary">Address</h3>
+                <nav>
+                    <p>Umshing Umjapung, behind Umshing Presbyterian Church, Meghalaya, India - 793022</p>
+                </nav>
+            </div>
+            <div class="contact">
+                <h3 class="font-secondary">Contact</h3>
+                <nav>
+                    <a href="mailto:dorsenhomestay@gmail.com"><span class="material-symbols-outlined">mail</span> dorsenhomestay@gmail.com</a>
+                    <a href="tel:+919863063286"><span class="material-symbols-outlined">call</span> +91 9863063286</a>
+                    <a href="tel:+918730099269"><span class="material-symbols-outlined">call</span> +91 8730099269</a>
+                </nav>
+            </div>
+        </div>
         <hr>
         <p class="copyright">Copyright © 2023 - Dorsen Homestay</p>
     </footer>
-    <script src="../res/js/index.js?v=6.0"></script>
+
+    <div class="quick-contact-fab">
+        <div class="fab-actions" id="fab-actions">
+            <a class="fab-action" href="tel:+919863063286" tabindex="-1">
+                <span class="material-symbols-outlined">call</span> Call Us
+            </a>
+            <a class="fab-action" href="mailto:dorsenhomestay@gmail.com" tabindex="-1">
+                <span class="material-symbols-outlined">mail</span> Email Us
+            </a>
+            <a class="fab-action" href="../tours/" tabindex="-1">
+                <span class="material-symbols-outlined">map</span> Explore Tours
+            </a>
+        </div>
+        <button class="fab-toggle" aria-expanded="false" aria-controls="fab-actions" aria-label="Quick contact options">
+            <span class="material-symbols-outlined fab-icon-open">support_agent</span>
+            <span class="material-symbols-outlined fab-icon-close">close</span>
+        </button>
+    </div>
+
+    <script src="../res/js/index.js?v=9.0"></script>
   </body>
 </html>

@@ -9,7 +9,7 @@
     <link rel="icon" sizes="48x48" href="../res/media/logo/dorsen-homestay-favicon-48x48.png" type="image/png">
     <link rel="apple-touch-icon" sizes="1931x1931" href="../res/media/logo/dorsen-homestay-favicon.png" type="image/png">
     <link rel="apple-touch-icon" sizes="48x48" href="../res/media/logo/dorsen-homestay-favicon-48x48.png" type="image/png">
-    <link rel="stylesheet" href="../res/css/main.css?v=7.0">
+    <link rel="stylesheet" href="../res/css/main.css?v=9.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
@@ -17,17 +17,25 @@
             <div class="header-container">
                 <div class="brand">
                     <a href="../">
-                        <img src="../res/media/logo/dorsen-homestay-accent-dark.svg" alt="Dorsen Homestay Logo">
+                        <img class="brand-crest" src="../res/media/logo/dorsen-homestay-favicon.svg" alt="">
+                        <span class="brand-word">
+                            <span class="brand-word-top">Dorsen</span>
+                            <span class="brand-word-bottom">Homestay</span>
+                        </span>
                     </a>
                 </div>
                 <div class="navigation">
                     <nav>
                         <a href="../">Home</a>
                         <a href="./" class="active-nav-item">Rooms</a>
+                        <a href="../tours/">Tours</a>
                         <a href="../contact/">Contact</a>
                     </nav>
                 </div>
                 <div class="click-to-action">
+                    <a href="tel:+919863063286" class="btn desktop-only">
+                        <span class="material-symbols-outlined">call</span> Book Now
+                    </a>
                     <div class="hamburger-menu">
                         <label for="menu-check">
                             <input type="checkbox" id="menu-check"/>
@@ -44,6 +52,7 @@
                     <nav class="navigation">
                         <a href="../">Home</a>
                         <a href="./" class="active-nav-item">Rooms</a>
+                        <a href="../tours/">Tours</a>
                         <a href="../contact/">Contact</a>
                         <a href="tel:+919863063286" class="light-button">Book Your Stay <span class="material-symbols-outlined"> chevron_right </span> </a>
                     </nav>
@@ -66,12 +75,13 @@
             </div>
         </header>
     <section class="page-title-section">
+        <span class="material-symbols-outlined icon">bed</span>
         <h2 class="font-secondary">Our Rooms</h2>
-        <p>Home > Rooms</p>
+        <p>Home / Rooms</p>
     </section>
 
     <section class="bg-white" id="room-1">
-        <div class="room-container container">
+        <div class="room-container container reveal">
             <div class="room-gallery">
                 <img src="../res/media/uploads/room_1_1.jpg" id="room-1-expandedImg" style="width:100%">
                 <div class="images">
@@ -105,7 +115,7 @@
     </section>
 
     <section class="bg-light" id="room-2">
-        <div class="room-container room-container-row-reverse container">
+        <div class="room-container room-container-row-reverse container reveal">
             <div class="room-gallery">
                 <img src="../res/media/uploads/room_2_1.jpg" id="room-2-expandedImg" style="width:100%">
                 <div class="images">
@@ -139,7 +149,7 @@
     </section>
 
     <section class="bg-white" id="room-3">
-        <div class="room-container container">
+        <div class="room-container container reveal">
             <div class="room-gallery">
                 <img src="../res/media/uploads/room_3_1.jpg" id="room-3-expandedImg" style="width:100%">
                 <div class="images">
@@ -173,7 +183,7 @@
     </section>
 
     <section class="bg-light" id="room-4">
-        <div class="room-container room-container-row-reverse container">
+        <div class="room-container room-container-row-reverse container reveal">
             <div class="room-gallery">
                 <img src="../res/media/uploads/room_4_1.jpg" id="room-4-expandedImg" style="width:100%">
                 <div class="images">
@@ -207,7 +217,7 @@
     </section>
 
     <section class="bg-white" id="room-5">
-        <div class="room-container container">
+        <div class="room-container container reveal">
             <div class="room-gallery">
                 <img src="../res/media/uploads/room_5_1.jpg" id="room-5-expandedImg" style="width:100%">
                 <div class="images">
@@ -241,7 +251,7 @@
     </section>
 
     <section class="bg-light" id="room-6">
-        <div class="room-container room-container-row-reverse container">
+        <div class="room-container room-container-row-reverse container reveal">
             <div class="room-gallery">
                 <img src="../res/media/uploads/room_6_1.jpg" id="room-6-expandedImg" style="width:100%">
                 <div class="images">
@@ -275,7 +285,7 @@
     </section>
 
     <section class="bg-white" id="room-7">
-        <div class="room-container container">
+        <div class="room-container container reveal">
             <div class="room-gallery">
                 <img src="../res/media/uploads/room_7_1.jpg" id="room-7-expandedImg" style="width:100%">
                 <div class="images">
@@ -311,7 +321,13 @@
     <footer>
             <div class="footer-section container">
                 <div class="brand">
-                    <img src="../res/media/logo/dorsen-homestay-light.svg" alt="Dorsen Homestay Logo">
+                    <span class="brand-mark">
+                        <img class="brand-crest" src="../res/media/logo/dorsen-homestay-favicon.svg" alt="">
+                        <span class="brand-word">
+                            <span class="brand-word-top">Dorsen</span>
+                            <span class="brand-word-bottom">Homestay</span>
+                        </span>
+                    </span>
                 </div>
                 <div class="contact">
                     <h3 class="font-secondary">Address</h3>
@@ -331,9 +347,23 @@
             <hr>
             <p class="copyright">Copyright © 2023 - Dorsen Homestay</p>
         </footer>
-        <section class="sticky-click-to-action">
-            <a href="tel:+919863063286"><button>Book Your Stay <span class="material-symbols-outlined"> arrow_outward </span> </button></a>
-        </section>
-        <script src="../res/js/index.js?v=6.0"></script>
+        <div class="quick-contact-fab">
+            <div class="fab-actions" id="fab-actions">
+                <a class="fab-action" href="tel:+919863063286" tabindex="-1">
+                    <span class="material-symbols-outlined">call</span> Call Us
+                </a>
+                <a class="fab-action" href="mailto:dorsenhomestay@gmail.com" tabindex="-1">
+                    <span class="material-symbols-outlined">mail</span> Email Us
+                </a>
+                <a class="fab-action" href="../tours/" tabindex="-1">
+                    <span class="material-symbols-outlined">map</span> Explore Tours
+                </a>
+            </div>
+            <button class="fab-toggle" aria-expanded="false" aria-controls="fab-actions" aria-label="Quick contact options">
+                <span class="material-symbols-outlined fab-icon-open">support_agent</span>
+                <span class="material-symbols-outlined fab-icon-close">close</span>
+            </button>
+        </div>
+        <script src="../res/js/index.js?v=9.0"></script>
   </body>
 </html>
