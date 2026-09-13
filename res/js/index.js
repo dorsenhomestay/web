@@ -3,9 +3,6 @@ const myHeader = document.getElementById('my-header'); // Header
 const hamburgerMenu =  document.getElementById('menu-check'); // Hamburger Menu
 const slideMenu = document.getElementById('slide-menu'); // Sliding Menu
 let prevScrollpos = window.pageYOffset; // Scroll Position
-const bookYourStay = document.getElementById("book-your-stay"); // Close Book Your Stay
-const closeBookYourStay = document.getElementById("close-book-your-stay"); // Open Book Your Stay
-const openBookYourStay = document.getElementsByClassName("open-book-your-stay"); // Book Your Stay
 
 // WINDOW SCROLL ACTION
 window.onscroll = function() { 
@@ -36,10 +33,6 @@ hamburgerMenu.addEventListener('click', function() {
   }
   }
 });
-closeBookYourStay.addEventListener("click", () =>{
-     bookYourStay.classList.add("hide-book-your-stay");
-});
-Array.from(openBookYourStay).forEach((elem) => { elem.addEventListener("click", (e) => {bookYourStay.classList.remove("hide-book-your-stay");}); })
 
 // ROOMS IMAGE GALLERY
 function expandImageFunc(imgs, sectionId) {

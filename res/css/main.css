@@ -216,7 +216,7 @@ header #slide-menu .contact span { color: var(--color-primary); }
 .welcome-section { display: flex; }
 .welcome-section .message { background-color: var(--color-white); border-radius: 4px; z-index: 5; }
 .welcome-section .message p { margin-bottom: 0; }
-.welcome-section .display-image { background: transparent url("https://dorsenhomestay.com/res/media/uploads/front_entrance_1_1.jpg") no-repeat center center / cover; z-index: 4; }
+.welcome-section .display-image { background: transparent url("../media/uploads/front_entrance_1_1.jpg") no-repeat center center / cover; z-index: 4; }
 
 @media only screen and (max-width: 999px) {
     .welcome-section { flex-direction: column; padding: 5rem 1rem; align-items: center; justify-content: center; }
@@ -303,35 +303,6 @@ header #slide-menu .contact span { color: var(--color-primary); }
 }
 
 /*----------------------------------PAGE TITLE SECTION----------------------------------*/
-
-/*----------------------------------BOOK YOUR STAY----------------------------------*/
-
-.hide-book-your-stay { top: -100vh !important; transition: top 400ms ease-in-out; overflow: hidden; }
-#book-your-stay { display: flex; flex-direction: column; position: fixed; align-items: center; top: 0; overflow-y: scroll; height: 100vh; width: 100vw; z-index: 12; transition: top 400ms ease-in-out; background-color: var(--color-secondary); padding: 1rem; }
-#book-your-stay #close-book-your-stay { position: absolute; top: 5px; right: 5px; align-self: end; padding: 0 1rem; cursor: pointer; }
-#book-your-stay #close-book-your-stay span { font-size: 3rem; }
-#book-your-stay .head { display: flex; flex-direction: column; align-items: center; justify-content: center; }
-#book-your-stay .title { font-size: 2.5rem; margin: 2px; }
-#book-your-stay .subtitle { font-size: 1rem; text-transform: uppercase; }
-#book-your-stay .body { width: 100%; max-width: 800px; border-radius: 4px; background-color: var(--color-white); margin-top: 1rem; padding: 2rem; text-align: center; }
-
-.booking-form { text-align: left; }
-.booking-form input[type=text], input[type=email], input[type=date], select, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; margin-top: 6px; margin-bottom: 16px; resize: none; font-family: 'Poppins', sans-serif; }
-
-@media only screen and (max-width: 999px) {
-    #book-your-stay { padding-bottom: 5rem; }
-}
-
-@media only screen and (min-width: 1000px) {
-    #book-your-stay .head { padding: 2rem 0; }
-    .booking-form { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; justify-content: center; }
-    .booking-form .input { width: 45%; }
-    .booking-form .text-area { width: 90%; }
-    /*.booking-form label { display: block; width: 50%;  }*/
-    /*.booking-form input[type=text], input[type=email], input[type=date], select, textarea { width: 50%; }*/
-}
-
-/*----------------------------------BOOK YOUR STAY----------------------------------*/
 
 /*----------------------------------STICKY BUTTON----------------------------------*/
 
