@@ -1,4 +1,5 @@
-https://dorsenhomestay.com
-https://dorsenhomestay.com/rooms
-https://dorsenhomestay.com/tours
-https://dorsenhomestay.com/contact
+https://dorsenhomestay.com/
+https://dorsenhomestay.com/rooms/
+https://dorsenhomestay.com/tours/
+https://dorsenhomestay.com/gallery/
+https://dorsenhomestay.com/contact/
